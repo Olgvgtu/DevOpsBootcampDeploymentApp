@@ -7,5 +7,3 @@ file_exists_behavior: OVERWRITE
 
 Take into account that yml files are very sensitive on all spaces. Each space before the line matters. 
 Above line starts at the first symbol.
-
-aaa
