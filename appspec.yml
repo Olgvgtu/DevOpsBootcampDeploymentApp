@@ -3,7 +3,6 @@ os: linux
 files:
   - source: /index.html
     destination: /var/www/html/
-    file_exists_behavior: OVERWRITE
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
@@ -21,4 +20,7 @@ hooks:
     - location: scripts/validate_service.sh
       timeout: 300
       runas: root
-      
+  BeforeInstallCleanUp:
+    - location: scripts/cleanup.sh
+      timeout: 300
+      runas: root 
